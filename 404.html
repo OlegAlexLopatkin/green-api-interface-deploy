@@ -1,25 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Страница не найдена — перенаправление…</title>
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex" />
     <script>
-        (function () {
-            const pathSegments = window.location.pathname.split('/').filter(Boolean);
-            let basePath = '/';
-            if (pathSegments.length > 0 && window.location.hostname.endsWith('github.io')) {
-                basePath = '/' + pathSegments[0] + '/';
-            }
-            const redirectUrl = window.location.origin + basePath;
-            window.location.replace(redirectUrl);
-        })();
+      (function () {
+        const pathSegments = window.location.pathname
+          .split("/")
+          .filter(Boolean);
+        console.log("window.location.pathname", window.location.pathname);
+        console.log("pathSegments", pathSegments);
+        let basePath = "/";
+        if (
+          pathSegments.length > 0 &&
+          window.location.hostname.endsWith("github.io")
+        ) {
+          basePath = "/" + pathSegments[0] + "/";
+        }
+        console.log("basePath", basePath);
+        const redirectUrl = window.location.origin + basePath;
+        console.log("window.location.origin", window.location.origin);
+        console.log("redirectUrl", redirectUrl);
+        // window.location.replace(redirectUrl);
+      })();
     </script>
     <noscript>
-        <meta http-equiv="refresh" content="0; url=/index.html">
+      <meta http-equiv="refresh" content="0; url=/index.html" />
     </noscript>
-</head>
-<body>
+  </head>
+  <body>
     <p>Перенаправление на <a href="/index.html">главную страницу</a>…</p>
-</body>
+  </body>
 </html>
