@@ -11,7 +11,7 @@
             if (pathSegments.length > 0 && window.location.hostname.endsWith('github.io')) {
                 basePath = '/' + pathSegments[0] + '/';
             }
-            const redirectUrl = window.location.origin + basePath + 'index.html';
+            const redirectUrl = window.location.origin + basePath;
             window.location.replace(redirectUrl);
         })();
     </script>
