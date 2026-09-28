@@ -9,8 +9,6 @@
         const pathSegments = window.location.pathname
           .split("/")
           .filter(Boolean);
-        console.log("window.location.pathname", window.location.pathname);
-        console.log("pathSegments", pathSegments);
         let basePath = "/";
         if (
           pathSegments.length > 0 &&
@@ -18,11 +16,8 @@
         ) {
           basePath = "/" + pathSegments[0] + "/";
         }
-        console.log("basePath", basePath);
         const redirectUrl = window.location.origin + basePath;
-        console.log("window.location.origin", window.location.origin);
-        console.log("redirectUrl", redirectUrl);
-        // window.location.replace(redirectUrl);
+        window.location.replace(redirectUrl);
       })();
     </script>
     <noscript>
@@ -30,6 +25,6 @@
     </noscript>
   </head>
   <body>
-    <p>Перенаправление на <a href="/index.html">главную страницу</a>…</p>
+    <p>Перенаправление на <a href="https://olegalexlopatkin.github.io/green-api-interface-deploy">главную страницу</a>…</p>
   </body>
 </html>
